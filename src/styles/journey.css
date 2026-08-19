@@ -1,0 +1,1345 @@
+/* =========================================================
+   VHA OUR JOURNEY PAGE
+========================================================= */
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.journey-page {
+    position: relative;
+  
+    width: 100%;
+    min-height: 100vh;
+  
+    overflow: hidden;
+  }
+  
+  
+  /* =========================================================
+     HERO
+  ========================================================= */
+  
+  .journey-hero {
+    position: relative;
+  
+    padding:
+      70px 0
+      90px;
+  
+    overflow: hidden;
+  }
+  
+  
+  /* ambient cyan glow */
+  
+  .journey-hero::before {
+    content: "";
+  
+    position: absolute;
+  
+    width: 650px;
+    height: 650px;
+  
+    top: -360px;
+    right: -180px;
+  
+    border-radius: 50%;
+  
+    background:
+      rgba(0, 229, 255, 0.06);
+  
+    filter: blur(150px);
+  
+    pointer-events: none;
+  }
+  
+  
+  /* subtle secondary glow */
+  
+  .journey-hero::after {
+    content: "";
+  
+    position: absolute;
+  
+    width: 450px;
+    height: 450px;
+  
+    left: -250px;
+    bottom: -280px;
+  
+    border-radius: 50%;
+  
+    background:
+      rgba(124, 92, 255, 0.045);
+  
+    filter: blur(120px);
+  
+    pointer-events: none;
+  }
+  .journey-hero .container{
+    display: flex;
+  }
+  .journey-hero .container .right{
+    height: auto;
+    width: 50%;
+  }
+  .journey-hero .container .left{
+    height: auto;
+    width: 50%;
+  }
+  
+  /* =========================================================
+     HERO SYSTEM BAR
+  ========================================================= */
+  
+  .journey-system-bar {
+    position: relative;
+    z-index: 2;
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    gap: 30px;
+  
+    margin-bottom: 70px;
+  
+    padding-bottom: 18px;
+  
+    border-bottom:
+      1px solid
+      rgba(255, 255, 255, 0.08);
+  
+    color: #5b6773;
+  
+    font-size: 0.56rem;
+    font-weight: 600;
+  
+    letter-spacing: 0.17em;
+  
+    text-transform: uppercase;
+  }
+  
+  
+  .journey-status {
+    display: flex;
+    align-items: center;
+  
+    gap: 9px;
+  }
+  
+  
+  .journey-status i {
+    width: 6px;
+    height: 6px;
+  
+    display: block;
+  
+    border-radius: 50%;
+  
+    background:
+      var(--color-primary);
+  
+    box-shadow:
+      0 0 10px
+      rgba(0, 229, 255, 0.8);
+  
+    animation:
+      pulseGlow
+      2.5s ease-in-out
+      infinite;
+  }
+  
+  
+  /* =========================================================
+     HERO COPY
+  ========================================================= */
+  
+  
+  .journey-hero-copy {
+    position: relative;
+    z-index: 2;
+  
+    max-width: 920px;
+  }
+  
+  
+  .journey-hero-copy h1 {
+    margin: 0;
+  
+    font-size:
+      clamp(
+        4rem,
+        8vw,
+        8rem
+      );
+  
+    font-weight: 500;
+  
+    line-height: 0.88;
+  
+    letter-spacing: -0.06em;
+  }
+  
+  
+  .journey-hero-copy p {
+    max-width: 680px;
+  
+    margin-top: 30px;
+  
+    color: #8996a3;
+  
+    font-size: 1rem;
+  
+    line-height: 1.9;
+  }
+  
+  
+  /* =========================================================
+     TIMELINE SECTION
+  ========================================================= */
+  
+  .journey-timeline-section {
+    position: relative;
+  
+    padding:
+      40px 0
+      140px;
+  }
+  
+  
+  /* =========================================================
+     TIMELINE SHELL
+  ========================================================= */
+  
+  .timeline-shell {
+    --branch-width: 105px;
+    --node-size: 24px;
+  
+    position: relative;
+  
+    width:
+      min(
+        92vw,
+        1400px
+      );
+  
+    margin-inline: auto;
+  
+    padding:
+      55px 0;
+  }
+  
+  
+  /* =========================================================
+     CENTRAL VERTICAL TRUNK
+  ========================================================= */
+  
+  .timeline-core-line {
+    position: absolute;
+  
+    top: 0;
+    bottom: 0;
+  
+    left: 50%;
+  
+    width: 2px;
+  
+    transform:
+      translateX(-50%);
+  
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.035),
+        rgba(0, 229, 255, 0.24) 12%,
+        rgba(0, 229, 255, 0.42) 48%,
+        rgba(124, 92, 255, 0.3) 84%,
+        rgba(255, 255, 255, 0.035)
+      );
+  
+    box-shadow:
+      0 0 22px
+      rgba(0, 229, 255, 0.08);
+  }
+  
+  
+  /* subtle segmented effect */
+  
+  .timeline-core-line::after {
+    content: "";
+  
+    position: absolute;
+  
+    inset: 0;
+  
+    background:
+      repeating-linear-gradient(
+        to bottom,
+        transparent 0,
+        transparent 12px,
+        rgba(255, 255, 255, 0.08) 13px
+      );
+  
+    opacity: 0.22;
+  }
+  
+  
+  /* =========================================================
+     INDIVIDUAL TIMELINE ROW
+  ========================================================= */
+  
+  .timeline-row {
+    position: relative;
+  
+    display: grid;
+  
+    grid-template-columns:
+      1fr 1fr;
+  
+    min-height: 150px;
+  
+    align-items: center;
+  }
+  
+  
+  /* =========================================================
+     LEFT / RIGHT HALVES
+  ========================================================= */
+  
+  .timeline-half {
+    min-width: 0;
+  
+    display: flex;
+  }
+  
+  
+  .timeline-half-left {
+    justify-content: flex-end;
+  }
+  
+  
+  .timeline-half-right {
+    justify-content: flex-start;
+  }
+  
+  
+  /* =========================================================
+     TIMELINE CARD
+  ========================================================= */
+  
+  .timeline-card {
+    position: relative;
+  
+    width:
+      min(
+        100%,
+        700px
+      );
+  }
+  
+  
+  .timeline-card-left {
+    text-align: right;
+  }
+  
+  
+  .timeline-card-right {
+    text-align: left;
+  }
+  
+  
+  /* =========================================================
+     YEAR
+  ========================================================= */
+  
+  .timeline-year {
+    display: block;
+  
+    margin-bottom: 10px;
+  
+    color: #eef5fa;
+  
+    font-family:
+      "Space Grotesk",
+      sans-serif;
+  
+    font-size:
+      clamp(
+        1.1rem,
+        1.5vw,
+        1.4rem
+      );
+  
+    font-weight: 500;
+  
+    line-height: 1;
+  
+    letter-spacing: -0.04em;
+  }
+  
+  
+  /*
+    Position year roughly above the node
+  */
+  
+  .timeline-card-left
+  .timeline-year {
+    padding-right:
+      calc(
+        var(--branch-width) -
+        7px
+      );
+  }
+  
+  
+  .timeline-card-right
+  .timeline-year {
+    padding-left:
+      calc(
+        var(--branch-width) -
+        7px
+      );
+  }
+  
+  
+  /* =========================================================
+     CONNECTOR
+  ========================================================= */
+  
+  .timeline-connector {
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  .timeline-card-left
+  .timeline-connector {
+    justify-content: flex-end;
+  }
+  
+  
+  .timeline-card-right
+  .timeline-connector {
+    justify-content: flex-start;
+  }
+  
+  
+  /* =========================================================
+     HORIZONTAL BRANCH
+  ========================================================= */
+  
+  .timeline-branch {
+    width:
+      var(--branch-width);
+  
+    height: 2px;
+  
+    flex-shrink: 0;
+  }
+  
+  
+  /*
+    LEFT EVENT:
+    node -------- center line
+  */
+  
+  .timeline-card-left
+  .timeline-branch {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(0, 229, 255, 0.45),
+        rgba(255, 255, 255, 0.16)
+      );
+  }
+  
+  
+  /*
+    RIGHT EVENT:
+    center line -------- node
+  */
+  
+  .timeline-card-right
+  .timeline-branch {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.16),
+        rgba(0, 229, 255, 0.45)
+      );
+  }
+  
+  
+  /* =========================================================
+     TIMELINE NODE
+  ========================================================= */
+  
+  .timeline-node {
+    width:
+      var(--node-size);
+  
+    height:
+      var(--node-size);
+  
+    flex-shrink: 0;
+  
+    position: relative;
+  
+    border:
+      2px solid
+      rgba(0, 229, 255, 0.9);
+  
+    border-radius: 50%;
+  
+    background:
+      #061017;
+  
+    box-shadow:
+      0 0 0 5px
+        rgba(0, 229, 255, 0.055),
+      0 0 18px
+        rgba(0, 229, 255, 0.18);
+  }
+  
+  
+  .timeline-node::before {
+    content: "";
+  
+    position: absolute;
+  
+    inset: 5px;
+  
+    border-radius: 50%;
+  
+    background:
+      var(--color-primary);
+  
+    box-shadow:
+      0 0 10px
+      rgba(0, 229, 255, 0.75);
+  }
+  
+  
+  /* soft node halo */
+  
+  .timeline-node::after {
+    content: "";
+  
+    position: absolute;
+  
+    inset: -9px;
+  
+    border:
+      1px solid
+      rgba(0, 229, 255, 0.08);
+  
+    border-radius: 50%;
+  
+    pointer-events: none;
+  }
+  
+  
+  /* =========================================================
+     EVENT DESCRIPTION
+  ========================================================= */
+  
+  .timeline-text {
+    max-width: 600px;
+  
+    margin-top: 10px;
+  
+    color: #d2dbe3;
+  
+    font-family:
+      "Space Grotesk",
+      sans-serif;
+  
+    font-size:
+      clamp(
+        0.9rem,
+        1vw,
+        1rem
+      );
+  
+    font-weight: 400;
+  
+    line-height: 1.55;
+  }
+  
+  
+  .timeline-card-left
+  .timeline-text {
+    margin-left: auto;
+  
+    padding-right:
+      calc(
+        var(--branch-width) +
+        var(--node-size) +
+        18px
+      );
+  }
+  
+  
+  .timeline-card-right
+  .timeline-text {
+    margin-right: auto;
+  
+    padding-left:
+      calc(
+        var(--branch-width) +
+        var(--node-size) +
+        18px
+      );
+  }
+  
+  
+  /* =========================================================
+     TIMELINE BACKGROUND GLOWS
+  ========================================================= */
+  
+  .timeline-shell::before,
+  .timeline-shell::after {
+    content: "";
+  
+    position: absolute;
+  
+    width: 280px;
+    height: 280px;
+  
+    border-radius: 50%;
+  
+    filter: blur(120px);
+  
+    pointer-events: none;
+  
+    opacity: 0.55;
+  }
+  
+  
+  .timeline-shell::before {
+    top: 12%;
+    left: 5%;
+  
+    background:
+      rgba(124, 92, 255, 0.055);
+  }
+  
+  
+  .timeline-shell::after {
+    right: 5%;
+    bottom: 10%;
+  
+    background:
+      rgba(0, 229, 255, 0.045);
+  }
+  
+  
+  /* =========================================================
+     OUR STORY SECTION
+  ========================================================= */
+  
+  .journey-story-section {
+    position: relative;
+  
+    padding:
+      0 0
+      125px;
+  
+    border-top:
+      1px solid
+      var(--color-border);
+  
+    background:
+      linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.006),
+        transparent
+      );
+  }
+  
+  
+  /* =========================================================
+     OUR STORY SMALL HEADER
+  ========================================================= */
+  
+  .story-section-label {
+    display: flex;
+    align-items: center;
+  
+    gap: 14px;
+  
+    padding-top: 75px;
+  
+    margin-bottom: 48px;
+  }
+  
+  
+  .story-section-label > span {
+    width: 32px;
+    height: 1px;
+  
+    flex-shrink: 0;
+  
+    background:
+      var(--color-primary);
+  
+    box-shadow:
+      0 0 10px
+      rgba(0, 229, 255, 0.5);
+  }
+  
+  
+  .story-section-label h2 {
+    margin: 0;
+  
+    color:
+      var(--color-primary);
+  
+    font-family:
+      "Space Grotesk",
+      sans-serif;
+  
+    font-size: 1.2rem;
+  
+    font-weight: 700;
+  
+    line-height: 1;
+  
+    letter-spacing: 0.22em;
+  
+    text-transform: uppercase;
+  }
+  
+  
+  /* =========================================================
+     TEAM / PEOPLE GRID
+  ========================================================= */
+  
+  .story-people-grid {
+    display: flex;
+  
+    flex-wrap: wrap;
+  
+    align-items: flex-start;
+  
+    gap: 28px;
+  
+    margin-bottom: 58px;
+  }
+  
+  
+  /*
+    Flexible:
+    3 people = three cards
+    4 people = wraps cleanly
+    5+ = continues automatically
+  */
+  
+  .story-person-card {
+    flex:
+      1 1
+      250px;
+  
+    max-width: 320px;
+  
+    min-width: 220px;
+  }
+  
+  
+  /* =========================================================
+     PERSON IMAGE
+  ========================================================= */
+  
+  .story-person-image-wrap {
+    position: relative;
+  
+    width: 100%;
+  
+    aspect-ratio:
+      4 / 5;
+  
+    overflow: hidden;
+  
+    border:
+      1px solid
+      rgba(255, 255, 255, 0.08);
+  
+    border-radius: 16px;
+  
+    background:
+      rgba(255, 255, 255, 0.02);
+  
+    box-shadow:
+      0 25px 70px
+      rgba(0, 0, 0, 0.18);
+  
+    transition:
+      border-color
+      var(--transition-normal),
+      transform
+      var(--transition-normal);
+  }
+  
+  
+  .story-person-image-wrap::before {
+    content: "";
+  
+    position: absolute;
+  
+    inset: 0;
+  
+    z-index: 2;
+  
+    pointer-events: none;
+  
+    background:
+      linear-gradient(
+        to top,
+        rgba(4, 8, 12, 0.34),
+        transparent 42%
+      );
+  }
+  
+  
+  /* subtle technical corner */
+  
+  .story-person-image-wrap::after {
+    content: "";
+  
+    position: absolute;
+  
+    z-index: 3;
+  
+    width: 25px;
+    height: 25px;
+  
+    top: 12px;
+    left: 12px;
+  
+    border-top:
+      1px solid
+      rgba(0, 229, 255, 0.7);
+  
+    border-left:
+      1px solid
+      rgba(0, 229, 255, 0.7);
+  
+    pointer-events: none;
+  }
+  
+  
+  .story-person-image {
+    width: 100%;
+    height: 100%;
+  
+    object-fit: cover;
+  
+    transition:
+      transform
+      700ms
+      cubic-bezier(
+        0.2,
+        0.75,
+        0.25,
+        1
+      );
+  }
+  
+  
+  .story-person-card:hover
+  .story-person-image-wrap {
+    transform:
+      translateY(-4px);
+  
+    border-color:
+      rgba(0, 229, 255, 0.18);
+  }
+  
+  
+  .story-person-card:hover
+  .story-person-image {
+    transform:
+      scale(1.035);
+  }
+  
+  
+  /* =========================================================
+     PERSON NAME + TITLE
+  ========================================================= */
+  
+  .story-person-meta {
+    padding-top: 17px;
+  }
+  
+  
+  .story-person-meta h3 {
+    margin:
+      0 0
+      6px;
+  
+    color: #edf3f8;
+  
+    font-family:
+      "Space Grotesk",
+      sans-serif;
+  
+    font-size: 1.12rem;
+  
+    font-weight: 500;
+  
+    line-height: 1.25;
+  }
+  
+  
+  .story-person-meta span {
+    color: #8e9aa6;
+  
+    font-size: 0.72rem;
+  
+    font-weight: 500;
+  
+    letter-spacing: 0.07em;
+  
+    text-transform: uppercase;
+  }
+  
+  
+  /* =========================================================
+     SIMPLE SCHOOL STORY PARAGRAPH
+  ========================================================= */
+  
+  .story-text-block {
+    width:
+      min(
+        100%,
+        1200px
+      );
+  
+    margin-top: 10px;
+  }
+  
+  
+  .story-text-block p {
+    margin: 0;
+  
+    color: #aab4bd;
+  
+    font-size: 1rem;
+    text-align: justify;
+    line-height: 1.95;
+  }
+  .story-text-block p span{
+    font-weight: bold;
+    color: aqua;
+  }
+  
+  
+  /* =========================================================
+     TABLET
+  ========================================================= */
+  
+  @media (max-width: 1050px) {
+  
+    .timeline-shell {
+      --branch-width: 80px;
+  
+      width:
+        min(
+          94vw,
+          1200px
+        );
+    }
+  
+  
+    .timeline-row {
+      min-height: 175px;
+    }
+  
+  
+    .story-person-card {
+      flex:
+        1 1
+        230px;
+    }
+  
+  }
+  
+  
+  /* =========================================================
+     SMALL TABLET
+  ========================================================= */
+  
+  @media (max-width: 850px) {
+  
+    .timeline-shell {
+      --branch-width: 65px;
+    }
+  
+  
+    .timeline-year {
+      font-size: 1.1rem;
+    }
+  
+  
+    .timeline-text {
+      font-size: 0.96rem;
+    }
+  
+  
+    .timeline-card-left
+    .timeline-text {
+      padding-right:
+        calc(
+          var(--branch-width) +
+          var(--node-size) +
+          12px
+        );
+    }
+  
+  
+    .timeline-card-right
+    .timeline-text {
+      padding-left:
+        calc(
+          var(--branch-width) +
+          var(--node-size) +
+          12px
+        );
+    }
+  
+  }
+  
+  
+  /* =========================================================
+     MOBILE
+  ========================================================= */
+  
+  @media (max-width: 760px) {
+  
+    /* HERO */
+  
+    .journey-hero {
+      padding:
+        50px 0
+        65px;
+    }
+  
+  
+    .journey-system-bar {
+      flex-direction: column;
+  
+      align-items: flex-start;
+  
+      gap: 12px;
+  
+      margin-bottom: 50px;
+    }
+  
+  
+    .journey-hero-copy h1 {
+      font-size:
+        clamp(
+          3.5rem,
+          16vw,
+          5.5rem
+        );
+    }
+  
+  
+    .journey-hero-copy p {
+      font-size: 0.95rem;
+  
+      line-height: 1.8;
+    }
+  
+  
+    /* TIMELINE */
+  
+    .journey-timeline-section {
+      padding:
+        20px 0
+        90px;
+    }
+  
+  
+    .timeline-shell {
+      --branch-width: 45px;
+      --node-size: 22px;
+  
+      width:
+        calc(
+          100% -
+          30px
+        );
+  
+      padding:
+        30px 0
+        30px 24px;
+    }
+  
+  
+    /*
+      On mobile the central line moves
+      to the left side.
+    */
+  
+    .timeline-core-line {
+      left: 0;
+  
+      transform: none;
+    }
+  
+  
+    .timeline-row {
+      display: block;
+  
+      min-height: 0;
+  
+      margin-bottom: 58px;
+    }
+  
+  
+    .timeline-row:last-child {
+      margin-bottom: 0;
+    }
+  
+  
+    .timeline-half-left,
+    .timeline-half-right {
+      display: block;
+    }
+  
+  
+    /*
+      Hide whichever half contains
+      no event.
+    */
+  
+    .timeline-half:empty {
+      display: none;
+    }
+  
+  
+    .timeline-card {
+      width: 100%;
+  
+      text-align: left;
+    }
+  
+  
+    /*
+      RIGHT EVENT already has:
+      branch -> node
+  
+      On mobile that becomes:
+      center line -> branch -> node
+    */
+  
+    .timeline-card-right
+    .timeline-connector {
+      justify-content:
+        flex-start;
+    }
+  
+  
+    /*
+      LEFT EVENT desktop has:
+      node -> branch
+  
+      Reverse it on mobile so everything
+      becomes:
+      branch -> node
+    */
+  
+    .timeline-card-left
+    .timeline-connector {
+      justify-content:
+        flex-start;
+  
+      flex-direction:
+        row-reverse;
+    }
+  
+  
+    /* YEAR */
+  
+    .timeline-card-left
+    .timeline-year,
+    .timeline-card-right
+    .timeline-year {
+      padding-left:
+        calc(
+          var(--branch-width) +
+          var(--node-size) +
+          14px
+        );
+  
+      padding-right: 0;
+    }
+  
+  
+    .timeline-year {
+      margin-bottom: 10px;
+  
+      font-size: 1.65rem;
+    }
+  
+  
+    /* DESCRIPTION */
+  
+    .timeline-card-left
+    .timeline-text,
+    .timeline-card-right
+    .timeline-text {
+      max-width: 100%;
+  
+      margin-left: 0;
+      margin-right: 0;
+  
+      padding-left:
+        calc(
+          var(--branch-width) +
+          var(--node-size) +
+          14px
+        );
+  
+      padding-right: 0;
+    }
+  
+  
+    .timeline-text {
+      margin-top: 12px;
+  
+      font-size: 0.95rem;
+  
+      line-height: 1.6;
+    }
+  
+  
+    /* STORY */
+  
+    .journey-story-section {
+      padding-bottom: 90px;
+    }
+  
+  
+    .story-section-label {
+      padding-top: 55px;
+  
+      margin-bottom: 35px;
+    }
+  
+  
+    .story-people-grid {
+      gap: 34px;
+  
+      margin-bottom: 48px;
+    }
+  
+  
+    .story-person-card {
+      flex:
+        1 1
+        100%;
+  
+      max-width: none;
+  
+      min-width: 0;
+    }
+  
+  
+    .story-person-image-wrap {
+      aspect-ratio:
+        4 / 4.5;
+    }
+  
+  
+    .story-text-block p {
+      font-size: 0.96rem;
+  
+      line-height: 1.85;
+    }
+  
+  }
+  
+  
+  /* =========================================================
+     VERY SMALL MOBILE
+  ========================================================= */
+  
+  @media (max-width: 430px) {
+  
+    .journey-hero-copy h1 {
+      font-size:
+        clamp(
+          3rem,
+          17vw,
+          4.5rem
+        );
+    }
+  
+  
+    .timeline-shell {
+      width:
+        calc(
+          100% -
+          22px
+        );
+  
+      padding-left: 20px;
+    }
+  
+  
+    .timeline-shell {
+      --branch-width: 36px;
+      --node-size: 20px;
+    }
+  
+  
+    .timeline-card-left
+    .timeline-year,
+    .timeline-card-right
+    .timeline-year,
+    .timeline-card-left
+    .timeline-text,
+    .timeline-card-right
+    .timeline-text {
+      padding-left:
+        calc(
+          var(--branch-width) +
+          var(--node-size) +
+          11px
+        );
+    }
+  
+  
+    .story-person-image-wrap {
+      border-radius: 12px;
+    }
+  
+  }
+  
+  
+  /* =========================================================
+     REDUCED MOTION
+  ========================================================= */
+  
+  @media (
+    prefers-reduced-motion:
+    reduce
+  ) {
+  
+    .journey-status i {
+      animation: none;
+    }
+  
+  
+    .story-person-image,
+    .story-person-image-wrap {
+      transition: none;
+    }
+  
+  }

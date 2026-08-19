@@ -1,0 +1,83 @@
+:root {
+    /* =========================
+       COLORS
+    ========================== */
+  
+    --color-bg: #05070a;
+    --color-bg-soft: #080c12;
+    --color-surface: #0b1119;
+    --color-surface-light: #101923;
+  
+    --color-text: #f4f7fb;
+    --color-text-muted: #8d99a8;
+    --color-text-soft: #bac4cf;
+  
+    --color-primary: #00e5ff;
+    --color-primary-soft: #4df0ff;
+  
+    --color-secondary: #7c5cff;
+    --color-secondary-soft: #9b87ff;
+  
+    --color-border: rgba(255, 255, 255, 0.08);
+    --color-border-bright: rgba(0, 229, 255, 0.22);
+  
+    /* =========================
+       GRADIENTS
+    ========================== */
+  
+    --gradient-primary: linear-gradient(
+      135deg,
+      #00e5ff 0%,
+      #4d9cff 48%,
+      #8b5cff 100%
+    );
+  
+    --gradient-text: linear-gradient(
+      90deg,
+      #ffffff 0%,
+      #c7f9ff 40%,
+      #9a88ff 100%
+    );
+  
+    --gradient-panel: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.06),
+      rgba(255, 255, 255, 0.015)
+    );
+  
+    /* =========================
+       SHADOWS
+    ========================== */
+  
+    --shadow-primary:
+      0 0 20px rgba(0, 229, 255, 0.12),
+      0 0 60px rgba(0, 229, 255, 0.06);
+  
+    --shadow-card:
+      0 20px 60px rgba(0, 0, 0, 0.35);
+  
+    /* =========================
+       RADIUS
+    ========================== */
+  
+    --radius-sm: 8px;
+    --radius-md: 14px;
+    --radius-lg: 22px;
+    --radius-xl: 32px;
+  
+    /* =========================
+       LAYOUT
+    ========================== */
+  
+    --container-width: 1240px;
+  
+    --navbar-height: 90px;
+  
+    /* =========================
+       TRANSITIONS
+    ========================== */
+  
+    --transition-fast: 180ms ease;
+    --transition-normal: 300ms ease;
+    --transition-slow: 600ms ease;
+  }
